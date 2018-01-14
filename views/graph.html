@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mood Analyzer</title>
+<!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+<!--<link rel="stylesheet" href="css/style.css">-->
+<!--<script src="require.js" data-main="main"></script>-->
+<!--<script src="auth/auth.js"></script>-->
+
+</head>
+<body>
+<div class="container">
+    <!--<h1>graph</h1>-->
+    <canvas id="myChart" width="400" height="250"></canvas>
+</form>
+</div>
+<script>
+var data1 = []
+var data2 = []
+function data1F(){
+  
+var min = 0.0001
+var max = 1
+var value1 = Math.random() * (max - min) 
+
+var value2 = Math.random() * (max - min) 
+
+var value3 = Math.random() * (max - min) 
+
+var value4 = Math.random() * (max - min) 
+// console.log(value1)
+// console.log(value2)
+// console.log(value3)
+// console.log(value4)
+data1[0] = value1
+data1[1] = value2
+data1[2] = value3
+data1[3] = value4
+}
+function data2F(){
+  
+var min = 0.0001
+var max = 1
+var value1 = Math.random() * (max - min) 
+
+var value2 = Math.random() * (max - min) 
+
+var value3 = Math.random() * (max - min) 
+
+var value4 = Math.random() * (max - min) 
+// console.log(value1)
+// console.log(value2)
+// console.log(value3)
+// console.log(value4)
+data2[0] = value1
+data2[1] = value2
+data2[2] = value3
+data2[3] = value4
+}
+data1F()
+data2F()
+console.log(data1)
+console.log(data2)
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Emotional range", "Imagination", "Artistic Interests", "Intellect"],
+      datasets: [
+        {
+          label: "Before",
+          backgroundColor: "#3e95cd",
+          data: data1
+        }, {
+          label: "After",
+          backgroundColor: "#8e5ea2",
+          data: data2
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Personality Insights'
+      },
+       scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+}); 
+</script>
+</body>
+</html>

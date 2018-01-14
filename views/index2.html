@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mood Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+    .padding_top{
+        padding-top:5%;
+    }
+    .enlighten_sent{
+        letter-spacing:5px;
+        
+    }
+</style>
+<body>
+<div class="container padding_top">
+    <!--<h1>submitted</h1>-->
+    <!--<input type="text" id="this" class="form-control" placeholder="Username">-->
+    <!--<button type="button" class="btn btn-default" onclick="bla()">this</button>-->
+<p class="enlighten_sent">Want to ENLIGHTEN your Mood?</p>
+<hr>
+<a id="linkId" target="_blank" data-toggle="collapse" data-target="#demo"><h3>Click on this!</h3></a>
+<br><br>
+<div id="demo"  class="collapse">
+    <button class="btn btn-danger"data-toggle="collapse" data-target="#demo2">Ready for the next step?</button>
+ <hr>
+ <div id="demo2"  class="collapse">  
+ <small>We will re-evaluate you, in order to compare the change in your behaviour.</small>
+ <br><br>
+  <form method="post" action="/final">
+    <div class="form-group">
+      <label for="first">How do you feel now?</label>
+      <input type="text" class="form-control" placeholder="Feeling better yet?" name="feel">
+    </div>
+    <div class="form-group">
+      <label for="second">Did you like the content?</label>
+      <input type="text" class="form-control" placeholder="Do you feel good?" name="content">
+    </div>
+    <div class="form-group">
+      <label for="second">When did you last have fun? Write about it. </label>
+      <input type="text" class="form-control" placeholder="Fun? ;)" name="fun">
+    </div>
+    <div class="form-group">
+      <label for="second">What good risks did you take and how were you outside of your comfort zone? </label>
+      <input type="text" class="form-control" placeholder="Elaborate!" name="risk">
+    </div>
+    <div class="form-group">
+      <label for="second">What gave you the most meaning?</label>
+      <input type="text" class="form-control" placeholder="Feel free to write about it." name="meaning">
+    </div>
+    <div class="form-group">
+      <label for="second">How did you handle the tough times?</label>
+      <input type="text" class="form-control" placeholder="Tough times? uf!" name="toughTime">
+    </div>
+    <div class="form-group">
+      <label for="second">When was the last time you found yourself networking at a event? Write about it.</label>
+      <input type="text" class="form-control" placeholder="Networking? huh?" name="networking">
+    </div>
+    <div class="form-group">
+      <label for="second">When were you too hard on yourself?</label>
+      <input type="text" class="form-control" placeholder="Self-compassion?" name="hard">
+    </div>
+    <div class="form-group">
+      <label for="second">What gave you hope?</label>
+      <input type="text" class="form-control" placeholder="Yes! Hope!" name="hope">
+    </div>
+    <div class="form-group">
+      <label for="second">What did you learn about yourself today?</label>
+      <input type="text" class="form-control" placeholder="Learn?" name="learn">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <hr>
+</form>
+ </div>
+</div>
+</div>
+<script>
+  var links = [
+            'https://www.pickthebrain.com/blog/45-quick-easy-mood-lifters/',
+            'https://www.shoutmeloud.com/lift-your-mood-depressed.html',
+            'https://www.huffingtonpost.com/melissa-deuter-md/brighten-mood_b_5865532.html',
+            'http://www.womansday.com/health-fitness/wellness/advice/a3648/improve-your-mood-in-5-minutes-75319/',
+            'http://www.makeuseof.com/tag/8-best-daily-jokes-sites-to-lighten-up-your-mood/',
+            'http://modest-jokes.blogspot.in/2016/07/humor.html',
+            'http://modest-jokes.blogspot.in/2017/04/short-jokes.html',
+            'http://modest-jokes.blogspot.in/2017/07/comedy-jokes.html',
+            'http://www.patheos.com/blogs/ahappymedium/2017/10/lessonsfromspirit/',
+            'http://www.patheos.com/blogs/ahappymedium/2017/10/alone-crowded-world/',
+            'https://medium.com/behavior-design/confirmation-bias-why-you-make-terrible-life-choices-43fc6d6dcbe1',
+            'https://medium.com/personal-growth/10-ways-i-stay-ridiculously-focused-on-my-goals-686e2e39b0e2',
+            'https://medium.com/@garyvee/confidence-humility-4e104b995365',
+            'https://medium.com/the-mission/focus-on-learning-and-creating-rather-than-being-entertained-and-distracted-e6573de1bc84',
+            'https://medium.com/the-mission/lifes-toughest-questions-after-seeing-tim-ferriss-turn-40-7afe95c56c89',
+            'https://medium.com/personal-growth/5-ridiculously-simple-strategies-all-quick-learners-follow-e489a1d43416',
+            'https://psiloveyou.xyz/the-emotion-i-hide-the-most-7e415917f381',
+            'https://psiloveyou.xyz/stop-trying-to-be-famous-4e780facbf54',
+            'https://journal.thriveglobal.com/want-to-become-a-multi-millionaire-do-these-15-things-immediately-fb0e914ed591?source=placement_card_footer_grid---------1-43&gi=235706b344d0'
+   ]
+    
+
+var max = links.length
+var min = 0
+var randomNo = Math.floor(Math.random()*(max - min)) + min;
+var a = document.getElementById('linkId');
+a.href = links[randomNo]
+</script>
+</body>
+</html>

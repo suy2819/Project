@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mood Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  body{
+  /*background: #000;*/
+  padding-top: 10px;
+} 
+
+.typing{
+  color: black; 
+  font-family: "Courier";
+  font-size: 35px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 15s steps(60, end);
+  text-align: center;
+}
+
+/*.typing:nth-child(2){*/
+/*  animation: type2 8s steps(60, end);*/
+/*}*/
+
+/*span{*/
+/*  animation: blink 1s infinite;*/
+/*}*/
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+/*@keyframes type2{*/
+/*  0%{width: 0;}*/
+/*  50%{width: 0;}*/
+/*  100%{ width: 100; } */
+/*} */
+
+/*@keyframes blink{*/
+/*  to{opacity: .0;}*/
+/*}*/
+
+/* ::selection{
+  background: black;
+} */
+</style>
+<body>
+<div class="container">
+  <p class='typing'>Hi folks,<br> Welcome to <br><b>Mood Analyzer</b><br>Click on the button below to get Started!</p>
+<hr>
+ <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Ready?</button>
+  <hr>
+  <div id="demo" class="collapse">
+    <small>Write as much as possible, this will help us to precise our evaluation.</small>
+    <br><br>
+     <form method="post" action="/">
+    <div class="form-group">
+      <label for="first">How was your day?</label>
+      <input type="text" class="form-control" placeholder="Tell us about your day?" name="day">
+    </div>
+    <div class="form-group">
+      <label for="second"> How would you describe yourself?</label>
+      <input type="text" class="form-control" placeholder="Describe yourself" name="describe">
+    </div>
+    <div class="form-group">
+      <label for="second">How do you feel now?</label>
+      <input type="text" class="form-control" placeholder="Do you feel good?" name="feel">
+    </div>
+    <div class="form-group">
+      <label for="second">What is your biggest accomplishment?</label>
+      <input type="text" class="form-control" placeholder="Lets talk about your accomplishment" name="accomplishment">
+    </div>
+    <div class="form-group">
+      <label for="second">Have you read any good books lately?</label>
+      <input type="text" class="form-control" placeholder="If so, name few!" name="book">
+    </div>
+    <div class="form-group">
+      <label for="second">What is your dream job?</label>
+      <input type="text" class="form-control" placeholder="Dream Job?" name="job">
+    </div>
+    <div class="form-group">
+      <label for="second">Who is your personal hero?</label>
+      <input type="text" class="form-control" placeholder="Tony Stark?" name="hero">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  </div>
+  
+<!--<form method="post" action="/">-->
+<!--  <input type="test" name="para">-->
+  <!--<input type="test" name="field2">-->
+<!--  <input type="submit">-->
+<!--</form>-->
+</div>
+<script>
+    
+</script>
+</body>
+</html>
